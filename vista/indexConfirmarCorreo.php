@@ -8,10 +8,15 @@ require '../utiles/PHPMailer/SMTP.php';
 
 $datos = data_submitted();
 
+<<<<<<< HEAD
 if (!empty($datos) && empty($datos['accion'])) {
     $objABMAuth = new ABMAuth;
     $resp = $objABMAuth->registrarse($datos, $AUTH);
     if ($resp['alerta'] <> null) {
+=======
+    mailToken($resp['token'], $resp['selector'], $datos['email']);
+{
+>>>>>>> 0bf8f2d817ce5a4bbdac4c9c34133379c0049f28
 ?>
         <div class="container p-2">
             <?php echo $resp['alerta']; ?>
