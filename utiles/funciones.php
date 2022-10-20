@@ -37,6 +37,7 @@ spl_autoload_register(function ($clase) {
     }
 });
 
+
 function MsjBodyToken($token, $selector)
 {
     $body =
@@ -69,7 +70,7 @@ function MsjBodyToken($token, $selector)
                 </head>
 
                 <body>
-                        <h1 class='card-title bg-success text-white'>Consulta</h1>                        
+                        <h1 class='card-title bg-success text-white'>Confirmación Correo</h1>                        
                         <h3 class='card-subtitle mb-2 text-muted'>Este es tu Selector: {$selector}</h3>
                         <h3 class='card-subtitle mb-2 text-muted'>Este es tu Token: {$token}</h3>
                 </body>

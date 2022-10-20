@@ -15,22 +15,20 @@ include_once('./estructura/cabecera.php'); ?>
         if ($data['accion'] == true) {
             echo
             "
-                <div class='container text-center'> 
-                    <div class='card bg-warning'>
-                        <div class='card-body'>
-                            <h3>Su consulta fue enviada</h3>
-                        </div>
-                    </div>
+            <div class='container text-center'> 
+                <div class='alert alert-info alert-dismissible fade show' role='alert'>
+                <i class='fa-solid fa-check mx-2'></i> Su consulta fue enviada!
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                 </div>
+            </div>
             ";
         }else{
             echo 
             "
                 <div class='container text-center'> 
-                    <div class='card bg-danger'>
-                        <div class='card-body'>
-                            <h3>Su consulta no se puedo enviar</h3>
-                        </div>
+                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <i class='fa-solid fa-mark mx-2'></i> Su consulta no pudo ser enviada
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                     </div>
                 </div>
             ";

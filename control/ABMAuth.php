@@ -73,7 +73,8 @@ function registrarse($datos,$auth){
 
 function confirmarCorreo($datos, $auth){
 	try {
-		$auth->confirmEmail($datos['selector'], $datos['token']);
+        $duracion = 100000;
+		$auth->confirmEmailAndSignIn($datos['selector'], $datos['token'], $duracion);
 		return "<div class='alert alert-success' role='alert'><i class='fa-solid fa-check'></i> Correo Verificado!</div>";
 	}
 	catch (\Delight\Auth\InvalidSelectorTokenPairException $e) {

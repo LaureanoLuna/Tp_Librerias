@@ -56,8 +56,10 @@ if ($AUTH->isLoggedIn()) { // INICIO ESTA LOGEADO
 } else {  // INICIO NO ESTA LOGEADO
 
 ?>
-    <div class='alert alert-danger' role='alert'>
-        <h5><i class='fas fa-times-circle mx-2'></i>No se ha iniciado sesión - <a href='indexInicio.php'> Ingrese aquí </a> </h5>
+    <div class="container p-2">
+        <div class="alert alert-danger" role="alert">
+            <i class="fa-solid fa-xmark mx-2"></i> No se ha iniciado sesión - <a href='indexInicio.php'> Ingrese aquí </a>
+        </div>
     </div>
 <?php }  // FIN NO ESTA LOGEADO
 ?>

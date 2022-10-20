@@ -58,7 +58,7 @@ $('#registro').bootstrapValidator({
                     message: 'Debe ingresar su correo. '
                 },
                 regexp: {
-                    regexp: /^[\w-\.]+@([\w-]+\.)+[\w-]{1,4}$/g,
+                    regexp: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/g,
                 } 
             }
         },
