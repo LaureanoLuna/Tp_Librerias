@@ -37,8 +37,8 @@ spl_autoload_register(function ($clase) {
     }
 });
 
-function MsjBodyToken($token,$selector){
-
+function MsjBodyToken($token, $selector)
+{
     $body =
     "
         <!DOCTYPE html>
@@ -76,8 +76,7 @@ function MsjBodyToken($token,$selector){
             </html>
 ";
 
-return $body;
-
+    return $body;
 }
 
 //Funcion que contiene las estructuras del cuerpo de mails, retornado el cuerpo  armado del mail
@@ -164,46 +163,8 @@ function MsjBody($data, $motivo)
                     </html>
                 ";
             break;
-        case 2: {
-            $body = "
-                <!DOCTYPE html>
-                    <html lang='en'>
-                        <head>
-                        <meta charset='UTF-8'>
-                        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-                        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                        <!-- CSS only -->
-                            <style>
-                                *{
-                                    text-align: center;
-                                }
-                                body{
-                                    border-radius: 10px;
-                                    border: solid 1px;
-                                    padding: 0%;
-                                    box-shadow: 5px 5px 15px 5px #000000;
-                                }
-                                h1{
-                                    background-color: lightgreen;
-                                    padding: 1em;  
-                                }
-
-                            </style>
-
-                            <title>Document</title>
-                        </head>
-
-                        <body>
-                                <h1 class='card-title bg-success text-white'>Cambio de dueño</h1>
-                                <h3 class='card-subtitle mb-2 text-muted'>El auto con patente {$data['Patente']}, fue cambiado de dueño a la persona con dni: {$data['DniDuenio']}</h3>
-                                
-                        </body>
-                    </html>
-                ";
-        }
-            break;
         default:
-            $body = "Hola";
+            $body = "";
             break;
     }
 
@@ -220,17 +181,11 @@ function MsjBody($data, $motivo)
 
 function EnviarMail($data)
 {
-    switch($data['motivo']) {
-        case 'Consulta':{
-            if (mailConsulta($data) && mailAdminConsulta($data)) {
-                $exito= true;
-            } else {
-                $exito= false;
-            }
-        }
-            break;
+    if (mailConsulta($data) && mailAdminConsulta($data)) {
+        $exito= true;
+    } else {
+        $exito= false;
     }
-
     return $exito;
 }
 
@@ -313,7 +268,7 @@ function mailToken($token, $selector, $datos)
         $mail->Port = 465;
 
         $mail->setFrom('Autos.phpmailer@gmail.com', 'Administrador');
-        $mail->addAddress($datos['email'], $datos['nombre']);
+        $mail->addAddress($datos);
         //$mail->addCC('lunalaureanoluna@gmail.com');Autos.phpmailer@gmail.com
 
         $mail->isHTML(true);
