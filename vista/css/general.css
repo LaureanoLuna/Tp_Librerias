@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+}
+
+/* COLORES VALIDACIONES */
+.has-error, .has-error .help-block {
+    color: darkred;
+}
+
+.has-success, .has-success .help-block {
+    color: darkgreen;
+}
+
+
+
