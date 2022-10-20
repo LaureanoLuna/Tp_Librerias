@@ -24,9 +24,7 @@ if ($resp['alerta'] <> null) {
         echo "<script> window.location.href='./indexRegistro.php?accion=false'</script>";
     }
     
-echo $resp['selector']."<br>";
-echo $resp['token']."<br>";
-echo $datos['email']."<br>";
+
 ?>
 
     <div class="position-absolute top-50 start-50 translate-middle border border-3 rounded-2 p-4 bg-light">

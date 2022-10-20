@@ -18,10 +18,7 @@ if ($resp['alerta'] <> null) {
 } else
 
     mailToken($resp['token'], $resp['selector'], $datos['email']);
-
-echo $resp['selector'] . "<br>";
-echo $resp['token'] . "<br>";
-echo $datos['email'] . "<br>"; {
+{
 ?>
     <div class="position-absolute top-50 start-50 translate-middle border border-3 rounded-2 p-4 bg-light">
         <!-- FORMULARIO INGRESAR TOKEN Y SELECTOR -->
