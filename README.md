@@ -4,7 +4,7 @@ Utilizamos las librerías PHPMailer y PHPAuth para mostrar su funcionamiento y p
 
 # PARTICIPANTES
 
-Laureano Luna .
+Laureano Luna . lunalaureanoluna@gmail.com
 
 Braian Centurión . braiankrayan@hotmail.com
 
