@@ -141,7 +141,7 @@ function MsjBody($data, $motivo)
                                     text-align: center;
                                 }
                                 body{
-                                    border-radius: 10px;
+                                    border-radius: 15px;
                                     border: solid 1px;
                                     padding: 0%;
                                     box-shadow: 5px 5px 15px 5px #000000;
@@ -158,7 +158,8 @@ function MsjBody($data, $motivo)
 
                         <body>
                                 <h1 class='card-title bg-success text-white'>Consulta</h1>
-                                <h3 class='card-subtitle mb-2 text-muted'>{$data['nombre']}: Gracias por enviar tu consulta, la misma sera leida y respondida en breve!</h3>
+                                <h2 class='card-subtitle mb-2 text-muted'>Querid@ {$data['nombre']}:</h2>
+                                <h3>Gracias por enviar tu consulta, la misma sera leida y respondida en breve!</h3>
                                 
                         </body>
                     </html>
@@ -242,7 +243,7 @@ function mailConsulta($data)
         //$mail->addCC('lunalaureanoluna@gmail.com');
 
         $mail->isHTML(true);
-        $mail->Subject = 'Consulta de autos';
+        $mail->Subject = 'Consulta de Cuenta';
 
         $mail->Body = MsjBody($data, 1);
 
