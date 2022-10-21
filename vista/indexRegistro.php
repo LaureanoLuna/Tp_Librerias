@@ -17,15 +17,15 @@ $datos = data_submitted();
     <form action="indexConfirmarCorreo.php" name="registro" id="registro" method="post" accept-charset="utf-8">
         <div class="form-group mb-3">
             <label for="email" class="form-label">Correo: </label>
-            <input type="email" class="form-control" id="email" name="email">
+            <input type="email" class="form-control" id="email" name="email" autocomplete="off">
         </div>
         <div class="form-group mb-3">
             <label for="username" class="form-label">Nombre de Usuario: </label>
-            <input type="text" class="form-control" id="username" name="username">
+            <input type="text" class="form-control" id="username" name="username" autocomplete="off">
         </div>
         <div class="form-group mb-3">
             <label for="password" class="form-label">Contraseña: </label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" class="form-control" id="password" name="password" autocomplete="off">
         </div>
         <input name="require_verification" value="1" hidden>
         <input name="require_unique_username" value="1" hidden>

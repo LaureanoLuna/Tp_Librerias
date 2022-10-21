@@ -49,11 +49,11 @@ if (!empty($datos) && empty($datos['accion'])) {
             <form action="accionConfirmarCorreo.php" name="confirmar" id="confirmar" method="post" accept-charset="utf-8">
                 <div class="form-group mb-3">
                     <label for="selector" class="form-label">Selector: </label>
-                    <input type="text" class="form-control" id="selector" name="selector">
+                    <input type="text" class="form-control" id="selector" name="selector" autocomplete="off">
                 </div>
                 <div class="form-group mb-3">
                     <label for="token" class="form-label">Token: </label>
-                    <input type="text" class="form-control" id="token" name="token">
+                    <input type="text" class="form-control" id="token" name="token" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Confirmar Correo</button>
             </form>
@@ -94,11 +94,11 @@ if (!empty($datos) && empty($datos['accion'])) {
             <form action="accionConfirmarCorreo.php" name="confirmar" id="confirmar" method="post" accept-charset="utf-8">
                 <div class="form-group mb-3">
                     <label for="selector" class="form-label">Selector: </label>
-                    <input type="text" class="form-control" id="selector" name="selector">
+                    <input type="text" class="form-control" id="selector" name="selector" autocomplete="off">
                 </div>
                 <div class="form-group mb-3">
                     <label for="token" class="form-label">Token: </label>
-                    <input type="text" class="form-control" id="token" name="token">
+                    <input type="text" class="form-control" id="token" name="token" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Confirmar Correo</button>
             </form>
@@ -113,11 +113,11 @@ if (!empty($datos) && empty($datos['accion'])) {
             <form action="accionConfirmarCorreo.php" name="confirmar" id="confirmar" method="post" accept-charset="utf-8">
                 <div class="form-group mb-3">
                     <label for="selector" class="form-label">Selector: </label>
-                    <input type="text" class="form-control" id="selector" name="selector">
+                    <input type="text" class="form-control" id="selector" name="selector" autocomplete="off">
                 </div>
                 <div class="form-group mb-3">
                     <label for="token" class="form-label">Token: </label>
-                    <input type="text" class="form-control" id="token" name="token">
+                    <input type="text" class="form-control" id="token" name="token" autocomplete="off">
                 </div>
                 <button type="submit" class="btn btn-outline-primary">Confirmar Correo</button>
             </form>
