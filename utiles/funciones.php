@@ -1,4 +1,10 @@
 <?php
+// SI O SI REQUIERE EL AUTOLOAD DE PHPAUTH
+require __DIR__.'/../utiles\PHPAuth\vendor\autoload.php';
+include_once('..\modelo\conector\BaseDatos.php');
+$BASEDATOS = new BaseDatos();
+// CREAMOS UNA INSTANCIA DE LA CLASE PHPAUTH PARA UTILIZAR SUS MÉTODOS EN EL ABM POSTERIORMENTE
+$AUTH = new \Delight\Auth\Auth($BASEDATOS);
 
 // Archivo llamado por ../configuracion.php
 use PHPMailer\PHPMailer\PHPMailer;
