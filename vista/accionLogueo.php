@@ -7,7 +7,7 @@ $objAMBAuth= new ABMAuth;
 $resp=$objAMBAuth->loguearse($datos,$AUTH);
 ?>
 <div class="container p-2">
-    <?php echo $resp; ?>
+    <?php echo $resp['alerta']; ?>
 </div>
 
 <div class="text-center" style="width: 300px;">
