@@ -14,6 +14,6 @@ Roni Broilo . ronniebroilo@gmail.com
 
 # LIBRERIAS
 
-delight-in/PHP-Auth . [Enlace]: https://github.com/delight-im/PHP-Auth
+delight-in/PHP-Auth . [Enlace](https://github.com/delight-im/PHP-Auth)
 
-PHPMailer . [Enlace]: https://github.com/PHPMailer/PHPMailer
+PHPMailer . [Enlace](https://github.com/PHPMailer/PHPMailer)
