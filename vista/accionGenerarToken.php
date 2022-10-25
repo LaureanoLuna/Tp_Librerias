@@ -19,7 +19,7 @@ if ($resp['alerta'] <> null) {
     if(mailToken($resp['token'],$resp['selector'],$datos['email'])){
         echo "<script> window.location.href='indexConfirmarCorreo.php?accion=true'</script>";
     }else{
-        echo "<script> window.location.href='indexRegistro.php?accion=false'</script>";
+        echo "<script> window.location.href='indexRegistro.php'</script>";
     }
 }
 ?>
