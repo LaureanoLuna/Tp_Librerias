@@ -73,7 +73,7 @@ function confirmarCorreo($datos, $auth){
 	try {
         $duracion = 100000;
 		$auth->confirmEmailAndSignIn($datos['selector'], $datos['token'], $duracion);
-		return ['alerta'=>"<div class='alert alert-success' role='alert'><i class='fa-solid fa-check'></i> Correo Verificado!</div>"];
+		return ['alerta'=>null];
 	}
 	catch (\Delight\Auth\InvalidSelectorTokenPairException $e) {
 		return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Token Inválido</div>"];
