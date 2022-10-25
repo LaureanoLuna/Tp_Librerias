@@ -14,28 +14,26 @@ class ABMAuth
 				header('Location: ./indexSeguro.php');
             }
             else {
-                return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-xmark'></i> Nombre de Usuario Requerido</div>";
+                return ['alerta'=> "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-xmark'></i> Nombre de Usuario Requerido</div>"];
             }
-
-            return 'ok';
         }
         catch (\Delight\Auth\InvalidEmailException $e) {
-            return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Dirección de Correo Incorrecta</div>";
+            return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Dirección de Correo Incorrecta</div>"];
         }
         catch (\Delight\Auth\UnknownUsernameException $e) {
-            return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Nombre de Usuario Desconocido</div>";
+            return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Nombre de Usuario Desconocido</div>"];
         }
         catch (\Delight\Auth\AmbiguousUsernameException $e) {
-            return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Nombre de Usuario Ambiguo</div>";
+            return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Nombre de Usuario Ambiguo</div>"];
         }
 		catch (\Delight\Auth\EmailNotVerifiedException $e) {
-			return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Correo NO VERIFICADO</div>";
+			return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Correo NO VERIFICADO</div>"];
 		}
         catch (\Delight\Auth\InvalidPasswordException $e) {
-            return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Contraseña Incorrecta</div>";
+            return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Contraseña Incorrecta</div>"];
         }
         catch (\Delight\Auth\TooManyRequestsException $e) {
-            return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-face-dizzy'></i> Demasiadas Consultas</div>";
+            return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-face-dizzy'></i> Demasiadas Consultas</div>"];
         }
 }
 
@@ -75,19 +73,19 @@ function confirmarCorreo($datos, $auth){
 	try {
         $duracion = 100000;
 		$auth->confirmEmailAndSignIn($datos['selector'], $datos['token'], $duracion);
-		return "<div class='alert alert-success' role='alert'><i class='fa-solid fa-check'></i> Correo Verificado!</div>";
+		return ['alerta'=>"<div class='alert alert-success' role='alert'><i class='fa-solid fa-check'></i> Correo Verificado!</div>"];
 	}
 	catch (\Delight\Auth\InvalidSelectorTokenPairException $e) {
-		return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Token Inválido</div>";
+		return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Token Inválido</div>"];
 	}
 	catch (\Delight\Auth\TokenExpiredException $e) {
-		return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Token Expirado</div>";
+		return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Token Expirado</div>"];
 	}
 	catch (\Delight\Auth\UserAlreadyExistsException $e) {
-		return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Correo Ya Registrado</div>";
+		return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-person-circle-xmark'></i> Correo Ya Registrado</div>"];
 	}
 	catch (\Delight\Auth\TooManyRequestsException $e) {
-		return "<div class='alert alert-danger' role='alert'><i class='fa-solid fa-face-dizzy'></i> Demasiadas Consultas</div>";
+		return ['alerta'=>"<div class='alert alert-danger' role='alert'><i class='fa-solid fa-face-dizzy'></i> Demasiadas Consultas</div>"];
 	}
 }
 
